@@ -95,10 +95,9 @@ writingPath = os.path.join(mypath, "output/")
 os.chdir(readingPath)
 arr = os.listdir()
 #arr2=["input220.jpg","input243.jpg","input245.jpg","input261.jpg","input297.jpg","input312.jpg","input397.jpg","input13.jpg","input32.jpg"]
-arr2=["input333.jpg"]
+arr2=["input15.jpg"]
 arr.remove(".DS_Store")
 
-number = 15
 levelOfMergingWords = 0
 T_area = 6
 T_dens = 0.15  # .06
@@ -106,12 +105,12 @@ T_ratio = 0.06  # .06
 T_ins = 4
 L_den = 0.4
 
-for example in arr2:
+for example in arr:
 
     img = cv2.imread(readingPath+example)
 
     image = Image(img)
-
+    cv2.imwrite(writingPath + "Binary" + example, image.binary)
     # compute all CCs to determine its props
     listOfCC = []
     for cnt in image.getContours():
