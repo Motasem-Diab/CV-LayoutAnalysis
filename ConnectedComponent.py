@@ -58,6 +58,7 @@ class ConnectedComponent:
     def getDimentions(self):
         return self.Xmin, self.Ymin, self.w, self.h
 
+    
     # def take_Xmin(cnt):
     #     return cv2.boundingRect(cnt)[0]
 
