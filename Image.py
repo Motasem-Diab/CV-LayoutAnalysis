@@ -41,6 +41,7 @@ class Image:
 
     def getContured(self):
         return self.contured
+    
 
     def findContours(self):
         (contours, _) = cv2.findContours(self.getBinary(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
